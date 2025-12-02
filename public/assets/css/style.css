@@ -266,3 +266,38 @@ main {
 .form-page {
     padding-top: 90px !important;
 }
+
+.table-primary {
+    background-color: #7d7fdd !important;
+    color: white !important;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(125, 127, 221, 0.15);
+}
+
+.btn-warning {
+    background: #7d7fdd !important;
+    color: white !important;
+    border: 1px solid transparent !important;
+    transition: 0.3s;
+}
+
+.btn-warning:hover {
+    background: white !important;
+    color: #6b67fb !important;
+    border: 1px solid #6b67fb !important;
+}
+
+.btn-danger {
+    background: #ff4d4d !important;
+    color: white !important;
+    border: 1px solid transparent !important;
+    transition: 0.3s;
+}
+
+.btn-danger:hover {
+    background: white !important;
+    color: #ff4d4d !important;
+    border: 1px solid #ff4d4d !important;
+}
