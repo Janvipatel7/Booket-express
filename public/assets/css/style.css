@@ -314,20 +314,20 @@ main {
 
 .form-control:focus,
 .form-select:focus {
-    border-color: #7577dc !important;
+    border-color: #5b57d5 !important;
     border: none;
     transition: all ease-in-out 0.3s;
     box-shadow: 0 0 0 0.15rem rgba(125, 127, 221, 0.4) !important;
 }
 
 .form-check-input:checked {
-    background-color: #7d7fdd !important;
-    border-color: #7d7fdd !important;
+    background-color: #5b57d5 !important;
+    border-color: #5b57d5 !important;
 }
 
 .form-check-input:focus {
     box-shadow: 0 0 0 0.15rem rgba(125, 127, 221, 0.4) !important;
-    border-color: #7d7fdd !important;
+    border-color: #5b57d5 !important;
 }
 
 .form-card form .form-section {
@@ -499,4 +499,16 @@ main {
     display: block;
     margin-bottom: 10px;
     color: black;
+}
+
+@media (min-width: 992px) {
+    .sec-btn-custom {
+        display: none !important;
+    }
+}
+
+@media (max-width: 991px) {
+    .btn-custom {
+        display: none !important;
+    }
 }
