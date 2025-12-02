@@ -12,38 +12,43 @@
 <body class="form-page">
     <%- include('partials/header') %>
 
-        <main class="container pt-5 pt-md-4">
-            <div class="form-card mx-auto">
-                <h3 class="text-center mb-4">Add New Book</h3>
+        <main class="container mx-auto my-5 pt-lg-5">
+            <div class="form-card">
+
+                <h3 class="text-center mb-4 fw-semibold header-title">
+                    Add New Book
+                </h3>
 
                 <form action="/add-book" method="POST">
 
-                    <div class="row g-3 mb-3">
+                    <div class="row g-3 mb-3 form-section">
                         <div class="col-md-6">
-                            <label class="form-label text-black">Book Name :</label>
-                            <input type="text" name="bookName" class="form-control"/>
+                            <label class="form-label heading-color">Book Name :</label>
+                            <input type="text" name="bookName" class="form-control" placeholder="Enter book name"
+                                required />
                         </div>
 
                         <div class="col-md-6">
-                            <label class="form-label text-black">Author :</label>
-                            <input type="text" name="author" class="form-control"/>
+                            <label class="form-label heading-color">Author :</label>
+                            <input type="text" name="author" class="form-control" placeholder="Enter author name"
+                                required />
                         </div>
                     </div>
 
-                    <div class="row g-3 mb-3">
+                    <div class="row g-3 mb-3 form-section">
                         <div class="col-md-4">
-                            <label class="form-label text-black">Price :</label>
-                            <input type="number" name="price" class="form-control" />
+                            <label class="form-label heading-color">Price :</label>
+                            <input type="number" name="price" class="form-control" placeholder="Enter price" required />
                         </div>
 
                         <div class="col-md-4">
-                            <label class="form-label text-black">Publisher Date :</label>
-                            <input type="date" name="publisherDate" class="form-control"/>
+                            <label class="form-label heading-color">Publisher Date :</label>
+                            <input type="date" name="publisherDate" class="form-control" required />
                         </div>
 
                         <div class="col-md-4">
-                            <label class="form-label text-black">Genre :</label>
-                            <select name="genre" class="form-select">
+                            <label class="form-label heading-color">Genre :</label>
+                            <select name="genre" class="form-select" required>
                                 <option value="">Select Genre</option>
                                 <option>Classic</option>
                                 <option>Science</option>
@@ -56,9 +61,9 @@
                         </div>
                     </div>
 
-                    <div class="mb-3">
-                        <label class="form-label text-black">Format :</label>
-                        <div class="d-flex flex-wrap gap-4">
+                    <div class="form-section">
+                        <label class="form-label heading-color">Format :</label>
+                        <div class="d-flex flex-wrap gap-3 option-group">
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="format" value="Paperback" />
                                 <label class="form-check-label">Paperback</label>
@@ -76,9 +81,9 @@
                         </div>
                     </div>
 
-                    <div class="mb-4">
-                        <label class="form-label text-black">Features :</label>
-                        <div class="d-flex flex-wrap gap-4">
+                    <div class="form-section">
+                        <label class="form-label heading-color">Features :</label>
+                        <div class="d-flex flex-wrap gap-3 option-group">
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" name="features" value="Bestseller" />
                                 <label class="form-check-label">Bestseller</label>
@@ -91,9 +96,11 @@
                         </div>
                     </div>
 
-                    <button class="btn-custom">
-                        <span>Submit</span>
-                    </button>
+                    <div class="form-submit text-center">
+                        <button class="sec-btn-custom">
+                            <span>+ Add Book</span>
+                        </button>
+                    </div>
 
                 </form>
             </div>

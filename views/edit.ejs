@@ -13,39 +13,43 @@
     <%- include('partials/header') %>
         <main class="container mx-auto my-5 pt-lg-5">
             <div class="form-card">
-                <h3 class="text-center mb-4 fw-semibold" style="color:#6b67fb;">Edit Book Details</h3>
+
+                <h3 class="text-center mb-4 fw-semibold"
+                    style="color:#5b57d5; background-color:#0c183f; padding:15px 0;">
+                    Edit Book Details
+                </h3>
 
                 <form action="/edit-book/<%= editBook._id %>" method="POST">
 
-                    <div class="row g-3 mb-3">
+                    <div class="row g-3 mb-3 form-section">
                         <div class="col-md-6">
-                            <label class="form-label text-black">Book Name :</label>
+                            <label class="form-label heading-color">Book Name :</label>
                             <input type="text" name="bookName" class="form-control" value="<%= editBook.bookName %>"
                                 required />
                         </div>
 
                         <div class="col-md-6">
-                            <label class="form-label text-black">Author :</label>
+                            <label class="form-label heading-color">Author :</label>
                             <input type="text" name="author" class="form-control" value="<%= editBook.author %>"
                                 required />
                         </div>
                     </div>
 
-                    <div class="row g-3 mb-3">
+                    <div class="row g-3 mb-3 form-section">
                         <div class="col-md-4">
-                            <label class="form-label text-black">Price :</label>
+                            <label class="form-label heading-color">Price :</label>
                             <input type="number" name="price" class="form-control" value="<%= editBook.price %>"
                                 required />
                         </div>
 
                         <div class="col-md-4">
-                            <label class="form-label text-black">Publisher Date :</label>
+                            <label class="form-label heading-color">Publisher Date :</label>
                             <input type="date" name="publisherDate" class="form-control"
                                 value="<%= editBook.publisherDate %>" required />
                         </div>
 
                         <div class="col-md-4">
-                            <label class="form-label text-black">Genre :</label>
+                            <label class="form-label heading-color">Genre :</label>
                             <select name="genre" class="form-select" required>
                                 <option value="">Select Genre</option>
                                 <option <%=editBook.genre=="Classic" ? "selected" : "" %>>Classic</option>
@@ -59,9 +63,9 @@
                         </div>
                     </div>
 
-                    <div class="mb-3">
-                        <label class="form-label text-black">Format :</label>
-                        <div class="d-flex flex-wrap gap-3">
+                    <div class="form-section">
+                        <label class="form-label heading-color">Format :</label>
+                        <div class="d-flex flex-wrap gap-3 option-group">
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="format" value="Paperback"
                                     <%=editBook.format=="Paperback" ? "checked" : "" %> />
@@ -82,9 +86,9 @@
                         </div>
                     </div>
 
-                    <div class="mb-3">
-                        <label class="form-label text-black">Features :</label>
-                        <div class="d-flex flex-wrap gap-3">
+                    <div class="form-section">
+                        <label class="form-label heading-color">Features :</label>
+                        <div class="d-flex flex-wrap gap-3 option-group">
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" name="features" value="Bestseller"
                                     <%=editBook.features.includes("Bestseller") ? "checked" : "" %> />
@@ -99,14 +103,16 @@
                         </div>
                     </div>
 
-                    <button class="btn-custom">
-                        <span>
-                            Update
-                        </span>
-                    </button>
+                    <div class="form-submit text-center">
+                        <button class="sec-btn-custom">
+                            <span>Update</span>
+                        </button>
+                    </div>
+
                 </form>
             </div>
         </main>
+
 
 </body>
 
